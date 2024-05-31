@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <script src="https://kit.fontawesome.com/f803aa333d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="form-wrapper sign-in">
+            <form action="">
+                <h2>Sign In</h2>
+                <div class="input-group">
+                    <input type="text" required id="userName">
+                    <label for="">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" required id="password">
+                    <label for="">Password</label>
+                </div>
+                <div class="remerber">
+                    <label for=""><input type="checkbox">  Remember me</label>
+                </div>
+                <button type="submit" onclick="example()">Sign In</button>
+                <div class="signup-link">
+                    <p>Don't have an account? <a href="#" class="signUpBtn-link">Sign Up</a></p>
+                </div>
+                <div class="social-platform">
+                    <p>Or sign in with</p>
+                    <div class="social-icon">
+                        <a href="#"><i class="fa fa-google" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+
+        <div class="form-wrapper sign-up">
+            <form action="">
+                <h2>Sign Up</h2>
+                <div class="input-group">
+                    <input type="text" required id="">
+                    <label for="">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" required id="">
+                    <label for="">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" required id="">
+                    <label for="">Password</label>
+                </div>
+                <div class="remerber">
+                    <label for=""><input type="checkbox">  I agree the terms & conditions</label>
+                </div>
+                <button type="submit">Sign Up</button>
+                <div class="signup-link">
+                    <p>Already have an account? <a href="#" class="signInBtn-link">Sign In</a></p>
+                </div>
+               
+                
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script>
+    
+    const signUpBtnlink = document.querySelector('.signUpBtn-link');
+    const signInBtnlink = document.querySelector('.signInBtn-link');
+    const wrapper = document.querySelector('.wrapper');
+
+    signUpBtnlink.addEventListener('click',()=>{
+        wrapper.classList.toggle('active');
+    })
+
+    signInBtnlink.addEventListener('click',()=>{
+        wrapper.classList.toggle('active');
+    })
+
+    function example(){
+        let userName=document.getElementById("userName").value
+    let password=document.getElementById("password").value
+    console.log(userName,password);
+    }
+
+    
+    </script>
+</body>
+</html>
